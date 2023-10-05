@@ -1,0 +1,57 @@
+body{
+    margin:0;
+    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 350px;
+    word-wrap:break-word;
+}
+#save-button{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    background:rgb(131, 67, 251);
+    color: white;
+    padding: 10px 18px;
+    border:none; 
+}
+#delete-button{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    background-color: white;
+    color: rgb(131, 67, 251);
+    padding: 8px 18px;
+    border-width: 2px;
+    border-color: rgb(131, 67, 251);
+    margin-right: none;
+}
+#tab-button{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    background:rgb(131, 67, 251);
+    color: white;
+    padding: 10px 15px;
+    border:none; 
+}
+#input-tag{
+    padding: 10px;
+    margin-bottom: 5px;
+    width: 100%;
+    box-sizing: border-box;
+    border-color: rgb(131, 67, 251);
+    border-width: 1.5px;
+}
+ul{ 
+    margin-top: 20px;
+    list-style: none;    
+    padding-left: 0;
+}
+li{
+   padding-top: 8px;
+}
+
+li a{
+    color: rgb(131, 67, 251);
+    
+}
+#div2{
+    display: inline-block;
+}
