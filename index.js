@@ -16,6 +16,7 @@ if(inpt.value[0] === "$" && inpt.value[1] === "-")
     getelementById("" + aux).innerHTML = "";
     localStorage.setItem("Cache",JSON.stringify(myLinks));
 }
+
 button.addEventListener("click",function(){
     if(inpt.value !== "")
     {   
@@ -27,17 +28,7 @@ button.addEventListener("click",function(){
         li.innerHTML = "<a href=" + wrapLink(inpt.value) + " target = \"_blank\" " + "rel= \"noreferrer noopener\" " + ">" + wrapLink(inpt.value) + "</a>";
         uL.appendChild(li);
         inpt.value = "";
-    }
-    /*
-    if(inpt.value === "-1")
-    {
-    let y = 1;
-    myLinks.splice(aux,1);
-    getelementById("" + aux).innerHTML = "";
-    localStorage.setItem("Cache",JSON.stringify(myLinks));
-    }
-    */
-    
+    }    
 })
 
 del.addEventListener("dblclick",function(){
@@ -55,23 +46,18 @@ tab.addEventListener("click",function(){
             li.setAttribute("id","Links")
             li.innerHTML = "<a href=" + tabs[0].url + " target = \"_blank\" " + "rel= \"noreferrer noopener\" " + ">" + wrapLink(tabs[0].url) + "</a>";
             uL.appendChild(li);
-            let bt = document.createElement("button");
-            bt.setAttribute("id","li-button");
-            bt.innerHTML = "aa";
-            document.body.getelementById("Links").appendChild(bt);
-            
         })
 })
 
 function showLS(){
-    let aux = JSON.parse( localStorage.getItem("Cache") );
+    let aux = JSON.parse(localStorage.getItem("Cache") );
     if (aux !== null)
     {   
         let li = "";
         for(let i = 0; i < Object.keys(aux).length; i++)
         {
             li += " <li> <a href=" + aux[i] + " target = \"_blank\" " + "rel= \"noreferrer noopener\" " + ">" + wrapLink(aux[i]) + "</a> </li>";
-            myLinks.push(aux[i]); // Importante
+            myLinks.push(aux[i]); 
         }
         uL.innerHTML += li;
     }
